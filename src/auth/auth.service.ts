@@ -20,14 +20,14 @@ import { LoginResponseDto } from './dto/login-response.dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtRefreshPayloadType } from './strategies/types/jwt-refresh-payload.type';
 import { JwtPayloadType } from './strategies/types/jwt-payload.type';
-import { UsersService } from '../users/users.service';
+import { UsersService } from '../entities/users/users.service';
 import { AllConfigType } from '../config/config.type';
 import { MailService } from '../mail/mail.service';
-import { RoleEnum } from '../roles/roles.enum';
-import { Session } from '../session/domain/session';
-import { SessionService } from '../session/session.service';
-import { StatusEnum } from '../statuses/statuses.enum';
-import { User } from '../users/domain/user';
+import { RoleEnum } from '../entities/roles/roles.enum';
+import { Session } from '../entities/session/domain/session';
+import { SessionService } from '../entities/session/session.service';
+import { StatusEnum } from '../entities/statuses/statuses.enum';
+import { User } from '../entities/users/domain/user';
 
 @Injectable()
 export class AuthService {
