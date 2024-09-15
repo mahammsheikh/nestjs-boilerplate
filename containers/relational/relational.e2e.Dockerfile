@@ -8,15 +8,15 @@ RUN cd /tmp/app && npm install
 
 COPY . /usr/src/app
 RUN cp -a /tmp/app/node_modules /usr/src/app
-COPY ./wait-for-it.sh /opt/wait-for-it.sh
+COPY ../../bash/wait-for-it.sh /opt/wait-for-it.sh
 RUN chmod +x /opt/wait-for-it.sh
-COPY ./startup.document.dev.sh /opt/startup.document.dev.sh
-RUN chmod +x /opt/startup.document.dev.sh
+COPY ../../bash/startup.relational.ci.sh /opt/startup.relational.ci.sh
+RUN chmod +x /opt/startup.relational.ci.sh
 RUN sed -i 's/\r//g' /opt/wait-for-it.sh
-RUN sed -i 's/\r//g' /opt/startup.document.dev.sh
+RUN sed -i 's/\r//g' /opt/startup.relational.ci.sh
 
 WORKDIR /usr/src/app
-RUN if [ ! -f .env ]; then cp env-example-document .env; fi
+RUN echo "" > .env
 RUN npm run build
 
-CMD ["/opt/startup.document.dev.sh"]
+CMD ["/opt/startup.relational.ci.sh"]
