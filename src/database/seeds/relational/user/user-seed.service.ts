@@ -3,9 +3,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 import bcrypt from 'bcryptjs';
-import { RoleEnum } from '../../../../roles/roles.enum';
-import { StatusEnum } from '../../../../statuses/statuses.enum';
-import { UserEntity } from '../../../../users/infrastructure/persistence/relational/entities/user.entity';
+import { RoleEnum } from '@entities/roles/roles.enum';
+import { StatusEnum } from '@entities/statuses/statuses.enum';
+import { UserEntity } from '@entities/users/infrastructure/persistence/relational/entities/user.entity';
 
 @Injectable()
 export class UserSeedService {
@@ -31,7 +31,7 @@ export class UserSeedService {
         this.repository.create({
           firstName: 'Super',
           lastName: 'Admin',
-          email: 'admin@example.com',
+          email: 'admin@conradlabs.com',
           password,
           role: {
             id: RoleEnum.admin,
@@ -59,9 +59,9 @@ export class UserSeedService {
 
       await this.repository.save(
         this.repository.create({
-          firstName: 'John',
-          lastName: 'Doe',
-          email: 'john.doe@example.com',
+          firstName: 'Awais',
+          lastName: 'Kamran',
+          email: 'awais.kamran@conradlabs.com',
           password,
           role: {
             id: RoleEnum.user,
