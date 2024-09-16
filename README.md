@@ -130,7 +130,7 @@ npm run add:property:to-relational
 ## Generate migration
 
 
-1. Create entity file with extension `.entity.ts`. For example `post.entity.ts`:
+1. Once you have created the entity file with extension `.entity.ts`. For example `post.entity.ts` (as suggested in the previous section):
 
    ```ts
    // /src/posts/infrastructure/persistence/relational/entities/post.entity.ts
