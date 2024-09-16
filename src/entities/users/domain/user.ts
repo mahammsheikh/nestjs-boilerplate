@@ -20,7 +20,7 @@ export class User {
 
   @ApiProperty({
     type: String,
-    example: 'john.doe@example.com',
+    example: 'awais.kamran@conradlabs.com',
   })
   @Expose({ groups: ['me', 'admin'] })
   email: string | null;

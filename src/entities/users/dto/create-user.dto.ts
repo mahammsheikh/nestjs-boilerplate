@@ -27,11 +27,11 @@ export class CreateUserDto {
 
   socialId?: string | null;
 
-  @ApiProperty({ example: 'John', type: String })
+  @ApiProperty({ example: 'Awais', type: String })
   @IsNotEmpty()
   firstName: string | null;
 
-  @ApiProperty({ example: 'Doe', type: String })
+  @ApiProperty({ example: 'Kamran', type: String })
   @IsNotEmpty()
   lastName: string | null;
 
