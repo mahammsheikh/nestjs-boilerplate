@@ -130,7 +130,6 @@ npm run add:property:to-relational
 
 - Swagger (API docs): <http://localhost:3000/docs>
 - Adminer (client for DB): <http://localhost:8080>
-- MongoDB Express (client for DB): <http://localhost:8081/>
 - Maildev: <http://localhost:1080>
 
 ---
