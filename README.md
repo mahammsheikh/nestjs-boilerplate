@@ -4,9 +4,10 @@
 [![renovate](https://img.shields.io/badge/renovate-enabled-%231A1F6C?logo=renovatebot)](https://app.renovatebot.com/dashboard)
 
 ## Description 
-
 NestJS REST API boilerplate for a typical project
 Demo: <https://nestjs-boilerplate-test.herokuapp.com/docs>
+
+Compatible [React](https://github.com/Conrad-Labs/react-material-ui-seed-template) project can be found here.
 
 <https://github.com/user-attachments/assets/a66f114a-c714-4036-8eeb-20cbf04ae985>
 
