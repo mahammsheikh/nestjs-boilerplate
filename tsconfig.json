@@ -17,6 +17,18 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@auth/*": ["src/auth/*"],
+      "@auth-google/*": ["src/auth-google/*"],
+      "@entities/*": ["src/entities/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@database/*": ["src/database/*"],
+      "@mail/*": ["src/mail/*"],
+      "@mailer/*": ["src/mailer/*"],
+      "@social/*": ["src/social/*"],
+    }
   }
 }

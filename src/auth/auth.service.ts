@@ -13,21 +13,21 @@ import bcrypt from 'bcryptjs';
 import { AuthEmailLoginDto } from './dto/auth-email-login.dto';
 import { AuthUpdateDto } from './dto/auth-update.dto';
 import { AuthProvidersEnum } from './auth-providers.enum';
-import { SocialInterface } from '../social/interfaces/social.interface';
+import { SocialInterface } from '@social/interfaces/social.interface';
 import { AuthRegisterLoginDto } from './dto/auth-register-login.dto';
-import { NullableType } from '../utils/types/nullable.type';
+import { NullableType } from '@utils/types/nullable.type';
 import { LoginResponseDto } from './dto/login-response.dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtRefreshPayloadType } from './strategies/types/jwt-refresh-payload.type';
 import { JwtPayloadType } from './strategies/types/jwt-payload.type';
-import { UsersService } from '../entities/users/users.service';
-import { AllConfigType } from '../config/config.type';
-import { MailService } from '../mail/mail.service';
-import { RoleEnum } from '../entities/roles/roles.enum';
-import { Session } from '../entities/session/domain/session';
-import { SessionService } from '../entities/session/session.service';
-import { StatusEnum } from '../entities/statuses/statuses.enum';
-import { User } from '../entities/users/domain/user';
+import { UsersService } from '@entities/users/users.service';
+import { AllConfigType } from '@config/config.type';
+import { MailService } from '@mail/mail.service';
+import { RoleEnum } from '@entities/roles/roles.enum';
+import { Session } from '@entities/session/domain/session';
+import { SessionService } from '@entities/session/session.service';
+import { StatusEnum } from '@entities/statuses/statuses.enum';
+import { User } from '@entities/users/domain/user';
 
 @Injectable()
 export class AuthService {
