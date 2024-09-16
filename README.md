@@ -34,7 +34,8 @@ NestJS Boilerplate supports [TypeORM](https://www.npmjs.com/package/typeorm) and
 
 ## Development Workflow (PostgreSQL + TypeORM)
 
-1. Fork repository https://github.com/Conrad-Labs/nestjs-boilerplate
+1. Fork repository https://github.com/Conrad-Labs/nestjs-boilerplate OR You can choose the following to replicate the template
+<img width="883" alt="Screenshot 2024-09-16 at 1 36 09 PM" src="https://github.com/user-attachments/assets/afdbae34-9189-4f75-8f1b-f410febddc07">
 
 1. Go to folder, and copy `env-example-relational` as `.env`.
 
