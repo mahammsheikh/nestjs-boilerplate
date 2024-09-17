@@ -12,14 +12,14 @@ Compatible [React](https://github.com/Conrad-Labs/react-material-ui-seed-templat
 <https://github.com/user-attachments/assets/a66f114a-c714-4036-8eeb-20cbf04ae985>
 
 ## Things You Should Know
-- [Port And Adapter Pattern](https://www.youtube.com/watch?v=bDWApqAUjEI&t=64s)
+- [Port And Adapter Pattern](https://www.youtube.com/watch?v=bDWApqAUjEI&t=64s), which is being used to generate `Entity` classes and `Repository` interfaces.
+- [NestJs TypeORM Integration & Repository Pattern](https://docs.nestjs.com/techniques/database)
 
 ## Description of the module structure
-
 ```txt
 .
 ├── domain
-│   └── [DOMAIN_ENTITY].ts
+│   └── [DOMAIN_ENTITY].ts 
 ├── dto
 │   ├── create.dto.ts
 │   ├── find-all.dto.ts
@@ -120,6 +120,7 @@ NestJS Boilerplate supports [TypeORM](https://www.npmjs.com/package/typeorm) and
 | `nest e2e`                      | Runs end-to-end tests.                                                      |
 | `nest e2e --watch`              | Runs end-to-end tests in watch mode.                                        |
 | `nest lint`                     | Lints the project using configured linter rules.                            |
+---
 
 3. Fork repository https://github.com/Conrad-Labs/nestjs-boilerplate OR You can choose the following to replicate the template
 <img width="883" alt="Screenshot 2024-09-16 at 1 36 09 PM" src="https://github.com/user-attachments/assets/afdbae34-9189-4f75-8f1b-f410febddc07">
