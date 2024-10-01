@@ -1,0 +1,37 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Specify the Node.js version for NestJS
+    
+  pre_build:
+    commands:
+      - echo Authenticating with Amazon ECR...
+      - aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin $ECR_REGISTRY_URI
+
+  build:
+    commands:
+      - echo Installing Node.js dependencies...
+      - npm install
+      - echo Building the NestJS application...
+      - npm run build
+      - echo Building the Docker image...
+      - docker build -t $IMAGE_NAME .
+
+  post_build:
+    commands:
+      - echo Tagging the Docker image...
+      - docker tag $IMAGE_NAME:latest $ECR_REGISTRY_URI/$IMAGE_NAME:latest
+      - echo Pushing the Docker image to ECR...
+      - docker push $ECR_REGISTRY_URI/$IMAGE_NAME:latest
+      - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --region us-east-2 --force-new-deployment
+
+artifacts:
+  files: imagedefinitions.json
+
+cache:
+  paths:
+    - '/root/.docker/cli-plugins'
+    - '/root/.npm/**/*'
+    - 'dist/**/*'
