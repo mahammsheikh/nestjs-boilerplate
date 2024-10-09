@@ -12,6 +12,8 @@ phases:
 
   build:
     commands:
+      - echo "ECR_REGISTRY_URI is $ECR_REGISTRY_URI"
+      - echo "ECR_REGION is $ECR_REGION"
       - echo Installing Node.js dependencies...
       - npm install
       - echo Building the NestJS application...
@@ -35,3 +37,4 @@ cache:
     - '/root/.docker/cli-plugins'
     - '/root/.npm/**/*'
     - 'dist/**/*'
+
