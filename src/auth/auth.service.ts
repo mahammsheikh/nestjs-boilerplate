@@ -221,6 +221,7 @@ export class AuthService {
 
     await this.mailService.userSignUp({
       to: dto.email,
+      firstName: dto.firstName,
       data: {
         hash,
       },
@@ -346,6 +347,7 @@ export class AuthService {
         hash,
         tokenExpires,
       },
+      firstName: user.firstName,
     });
   }
 
@@ -481,6 +483,7 @@ export class AuthService {
         data: {
           hash,
         },
+        firstName: currentUser.firstName,
       });
     }
 
