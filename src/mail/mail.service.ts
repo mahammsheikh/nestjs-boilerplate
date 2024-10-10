@@ -59,6 +59,7 @@ export class MailService {
         text2,
         text3,
         firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }
@@ -112,6 +113,7 @@ export class MailService {
         text2,
         text3,
         firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }
@@ -161,6 +163,7 @@ export class MailService {
         text2,
         text3,
         firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }
