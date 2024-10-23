@@ -29,12 +29,12 @@ phases:
       - docker push 851725420958.dkr.ecr.us-east-2.amazonaws.com/boilerplate-backend:latest
       - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --region us-east-2 --force-new-deployment
 
-artifacts:
-  files: imagedefinitions.json
+# artifacts:
+#   files: imagedefinitions.json
 
-cache:
-  paths:
-    - '/root/.docker/cli-plugins'
-    - '/root/.npm/**/*'
-    - 'dist/**/*'
+# cache:
+#   paths:
+#     - '/root/.docker/cli-plugins'
+#     - '/root/.npm/**/*'
+#     - 'dist/**/*'
 
