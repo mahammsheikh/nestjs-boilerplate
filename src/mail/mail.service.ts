@@ -49,16 +49,17 @@ export class MailService {
         'src',
         'mail',
         'mail-templates',
-        'activation.hbs',
+        'activation2.hbs',
       ),
       context: {
         title: emailConfirmTitle,
         url: url.toString(),
         actionTitle: emailConfirmTitle,
-        app_name: this.configService.get('app.name', { infer: true }),
         text1,
         text2,
         text3,
+        firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }
@@ -71,15 +72,12 @@ export class MailService {
     let text1: MaybeType<string>;
     let text2: MaybeType<string>;
     let text3: MaybeType<string>;
-    let text4: MaybeType<string>;
-
     if (i18n) {
-      [resetPasswordTitle, text1, text2, text3, text4] = await Promise.all([
+      [resetPasswordTitle, text1, text2, text3] = await Promise.all([
         i18n.t('common.resetPassword'),
         i18n.t('reset-password.text1'),
         i18n.t('reset-password.text2'),
         i18n.t('reset-password.text3'),
-        i18n.t('reset-password.text4'),
       ]);
     }
 
@@ -102,7 +100,7 @@ export class MailService {
         'src',
         'mail',
         'mail-templates',
-        'reset-password.hbs',
+        'reset-password2.hbs',
       ),
       context: {
         title: resetPasswordTitle,
@@ -114,7 +112,8 @@ export class MailService {
         text1,
         text2,
         text3,
-        text4,
+        firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }
@@ -153,7 +152,7 @@ export class MailService {
         'src',
         'mail',
         'mail-templates',
-        'confirm-new-email.hbs',
+        'confirm-new-email2.hbs',
       ),
       context: {
         title: emailConfirmTitle,
@@ -163,6 +162,8 @@ export class MailService {
         text1,
         text2,
         text3,
+        firstName: mailData.firstName,
+        logoUrl: this.configService.get('app.logoUrl', { infer: true }),
       },
     });
   }

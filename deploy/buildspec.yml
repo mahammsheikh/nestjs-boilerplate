@@ -27,7 +27,7 @@ phases:
       - docker tag $IMAGE_NAME:latest $ECR_REGISTRY_URI/$IMAGE_NAME:latest
       - echo Pushing the Docker image to ECR...
       - docker push $ECR_REGISTRY_URI/$IMAGE_NAME:latest
-      #- aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --region us-east-2 --force-new-deployment
+      - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --region us-east-2 --force-new-deployment
 
 artifacts:
   files: imagedefinitions.json
