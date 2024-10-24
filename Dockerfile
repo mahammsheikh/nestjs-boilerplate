@@ -19,4 +19,6 @@ WORKDIR /usr/src/app
 RUN if [ ! -f .env ]; then cp env-example-relational .env; fi
 RUN npm run build
 
+ENV DATABASE_HOST=$DATABASE_HOST
+
 CMD ["/opt/startup.relational.dev.sh"]
